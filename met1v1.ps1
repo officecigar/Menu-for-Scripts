@@ -27,20 +27,27 @@ Think powershell think Mr-ITpro.com !!! FUN STUFF
 #powershell -noexit -command "[console]::WindowWidth=100; [console]::WindowHeight=70; [console]::BufferWidth=[console]::WindowWidth"
 
  $currentuser = whoami
-Write-Host "                                                                                                                             "  
-Write-Host "                                                                                                                             "  
-Write-Host "                                                                                                                             "  
-write-host -nonewline "Current user in ToolBox: " ; write-host -nonewline  -f yellow "$currentuser" 
-Write-Host "                                                                                                                             "  
-Write-Host "###########################################################"  
-Write-Host "                          __________                                                                            " 
-Write-Host "                         /  _/_  __/____  _________   "  
-Write-Host "                         / /  / /  / __ \/ ___/ __ \  "  
-Write-Host "                       _/ /  / /  / /_/ / /  / /_/ /   "  
-Write-Host "                      /___/ /_/  / .___/_/   \____/   " 
-Write-Host "                                /_/                                                                                          "  
-#Write-Host "                                                           " -ForegroundColor Green -BackgroundColor black                                      
-Write-Host "###########################################################"  
+
+
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black 
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black 
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black 
+Write-Host "     __  _______          __________                                                                                                                        "  -ForegroundColor Green -BackgroundColor black
+Write-Host "    /  |/  / __ \        /  _/_  __/____  _________    _________  ____ ___                                                                                  "  -ForegroundColor Green -BackgroundColor black
+Write-Host "   / /|_/ / /_/ /______  / /  / /  / __ \/ ___/ __ \  / ___/ __ \/ __ `__ \                                                                                 "  -ForegroundColor Green -BackgroundColor black
+Write-Host "  / /  / / _, _//_____/_/ /  / /  / /_/ / /  / /_/ /_/ /__/ /_/ / / / / / /                                                                                 "  -ForegroundColor Green -BackgroundColor black
+Write-Host " /_/  /_/_/ |_|       /___/ /_/  / .___/_/   \____/(_)___/\____/_/ /_/ /_/                                                                                  "  -ForegroundColor Green -BackgroundColor black
+Write-Host "                                /_/                                                                                                                         "  -ForegroundColor Green -BackgroundColor black
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black                                       
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
+Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
+
+
+ $host.UI.RawUI.WindowTitle = "Menu for Scripts "
 Write-Host "                                                           " -ForegroundColor white -BackgroundColor Red   
 Write-Host "                                                           " -ForegroundColor green -BackgroundColor White   
 Write-Host "                                                           " -ForegroundColor White -BackgroundColor Blue   
