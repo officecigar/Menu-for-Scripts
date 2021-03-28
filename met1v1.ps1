@@ -35,18 +35,16 @@ Write-Host "                                                                    
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black 
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black 
-Write-Host "     __  _______          __________                                                                                                                        "  -ForegroundColor Green -BackgroundColor black
-Write-Host "    /  |/  / __ \        /  _/_  __/____  _________    _________  ____ ___                                                                                  "  -ForegroundColor Green -BackgroundColor black
-Write-Host "   / /|_/ / /_/ /______  / /  / /  / __ \/ ___/ __ \  / ___/ __ \/ __ `__ \                                                                                 "  -ForegroundColor Green -BackgroundColor black
-Write-Host "  / /  / / _, _//_____/_/ /  / /  / /_/ / /  / /_/ /_/ /__/ /_/ / / / / / /                                                                                 "  -ForegroundColor Green -BackgroundColor black
-Write-Host " /_/  /_/_/ |_|       /___/ /_/  / .___/_/   \____/(_)___/\____/_/ /_/ /_/                                                                                  "  -ForegroundColor Green -BackgroundColor black
-Write-Host "                                /_/                                                                                                                         "  -ForegroundColor Green -BackgroundColor black
+Write-Host "     __  _______          __________                                                                                                                        "  -ForegroundColor red  -BackgroundColor black
+Write-Host "    /  |/  / __ \        /  _/_  __/____  _________    _________  ____ ___                                                                                  "  -ForegroundColor red -BackgroundColor black
+Write-Host "   / /|_/ / /_/ /______  / /  / /  / __ \/ ___/ __ \  / ___/ __ \/ __ `__ \                                                                                 "  -ForegroundColor White -BackgroundColor black
+Write-Host "  / /  / / _, _//_____/_/ /  / /  / /_/ / /  / /_/ /_/ /__/ /_/ / / / / / /                                                                                 "  -ForegroundColor White -BackgroundColor black
+Write-Host " /_/  /_/_/ |_|       /___/ /_/  / .___/_/   \____/(_)___/\____/_/ /_/ /_/                                                                                  "  -ForegroundColor blue -BackgroundColor black
+Write-Host "                                /_/                                                                                                                         "  -ForegroundColor blue -BackgroundColor black
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black                                       
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green -BackgroundColor black
-
-
  $host.UI.RawUI.WindowTitle = "Menu for Scripts "
 Write-Host "                                                           " -ForegroundColor white -BackgroundColor Red   
 Write-Host "                                                           " -ForegroundColor green -BackgroundColor White   
