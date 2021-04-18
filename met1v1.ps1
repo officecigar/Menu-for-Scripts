@@ -24,7 +24,6 @@ Think powershell think Mr-ITpro.com !!! FUN STUFF
         http://www.mr-itpro.com
  #>
 
-#powershell -noexit -command "[console]::WindowWidth=100; [console]::WindowHeight=70; [console]::BufferWidth=[console]::WindowWidth"
 
  $currentuser = whoami
 
@@ -45,7 +44,7 @@ Write-Host "                                                                    
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green 
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green 
 Write-Host "                                                                                                                                                            "  -ForegroundColor Green 
- $host.UI.RawUI.WindowTitle = "Menu for Scripts "
+$host.UI.RawUI.WindowTitle = "Menu for Scripts "
 Write-Host "                                                           " -ForegroundColor white -BackgroundColor Red   
 Write-Host "                                                           " -ForegroundColor green -BackgroundColor White   
 Write-Host "                                                           " -ForegroundColor White -BackgroundColor Blue   
@@ -60,15 +59,31 @@ Write-Host "  "
 Write-Host "###########################################################" 
 Write-Host "  "
 Write-Host "  "
- $host.UI.RawUI.WindowTitle = "Self Managing Scripts - ToolBox (Server) "
+$host.UI.RawUI.WindowTitle = "Self Managing Scripts - ToolBox (Server) "
 #powershell -noexit -command "[console]::WindowWidth=100; [console]::WindowHeight=70; [console]::BufferWidth=[console]::WindowWidth"
 
-$processes =  ls -Path C:\scripts\TonyB\toolsbox\testmenulist
+if ((Test-Path    "C:\scripts\TonyB\toolsbox\testmenulist\") -eq $true ){
+   
+   Write-Host  "The Proper directory structure is present." -ForegroundColor Green 
+   Write-Host "                                                           " 
+  }
+  else{
+    
+      New-Item -Path "C:\scripts\TonyB\toolsbox\testmenulist\" -ItemType Directory -ErrorAction Stop | Out-Null 
+      Write-Host "The proper directory structure has been created for your Toolbox scripts." -ForegroundColor Yellow 
+      Write-Host "Now you can add your scripts to the folder C:\scriptzs\TonyB\toolsbox\testmenulist\"  -ForegroundColor Yellow -NoNewline
+      Write-Host "'<YOUR SCRIPTS GO HERE>'" -ForegroundColor Magenta 
+      Write-Host "                                                           " 
+  }
+ 
+
+
+$scriptlists =  ls -Path C:\scripts\TonyB\toolsbox\testmenulist
 $menu = @{}
-for ($i=1;$i -le $processes.count; $i++) {
-    Write-Host "$i. $($processes[$i-1].name)"
+for ($i=1;$i -le $scriptlists.count; $i++) {
+    Write-Host "$i. $($scriptlists[$i-1].name)"
     Write-Host ""
-    $menu.Add($i,($processes[$i-1].name))
+    $menu.Add($i,($scriptlists[$i-1].name))
     }
 
 
@@ -84,7 +99,7 @@ if ($selection -eq $null){
 
 Get-ChildItem -Path C:\scripts\TonyB\toolsbox\testmenulist  -name $selection | Start-Process PowerShell.exe -argument "-noexit -nologo -noprofile -command C:\scripts\TonyB\toolsbox\testmenulist\$selection"
 cls
-powershell.exe C:\scripts\TonyB\toolsbox\met1.ps1 
+powershell.exe C:\scripts\TonyB\toolsbox\met1v1.ps1 
 
 
 #start-process powershell.exe -argument "-noexit -nologo -noprofile -command  c:\temp  $selection"
