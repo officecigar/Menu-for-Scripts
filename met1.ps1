@@ -14,7 +14,7 @@ Below is a screen example.
 2. testgood.ps1
 
    Enter selection: 2
-
+     
 .EXAMPLE
  met1.ps1
 .PARAMETER computername
@@ -81,12 +81,25 @@ if ((Test-Path    "C:\scripts\TonyB\toolsbox\testmenulist\") -eq $true ){
 $scriptlists =  ls -Path C:\scripts\TonyB\toolsbox\testmenulist
 $menu = @{}
 for ($i=1;$i -le $scriptlists.count; $i++) {
-    Write-Host "$i. $($scriptlists[$i-1].name)"
+    $textcolor = "$i. $($scriptlists[$i-1].name)"
+    
+    #Write-Host "$i. $($scriptlists[$i-1].name)"
     Write-Host ""
     $menu.Add($i,($scriptlists[$i-1].name))
+    
+
+            if ( $textcolor  -like "*DNSflush.ps1") {
+     
+            write-host $textcolor -ForegroundColor yellow
+    }
+    
+    else {
+    $textcolor
+    
     }
 
-
+    }
+  
 
 [int]$ans = Read-Host 'Enter selection'
 $selection = $menu.Item($ans)
@@ -99,7 +112,7 @@ if ($selection -eq $null){
 
 Get-ChildItem -Path C:\scripts\TonyB\toolsbox\testmenulist  -name $selection | Start-Process PowerShell.exe -argument "-noexit -nologo -noprofile -command C:\scripts\TonyB\toolsbox\testmenulist\$selection"
 cls
-powershell.exe C:\scripts\TonyB\toolsbox\met1v1.ps1 
+powershell.exe C:\scripts\TonyB\toolsbox\met1.ps1 
 
 
 #start-process powershell.exe -argument "-noexit -nologo -noprofile -command  c:\temp  $selection"
