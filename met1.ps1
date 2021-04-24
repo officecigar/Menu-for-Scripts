@@ -58,13 +58,16 @@ Write-Host "  Please Enter a number for the script you want to run." -Foreground
 Write-Host "  "
 Write-Host "###########################################################" 
 Write-Host "  "
+Write-Host "  Other Sub menu(s) are in highlighted in yellow." -ForegroundColor yellow 
+Write-Host "  "
+Write-Host "###########################################################" 
 Write-Host "  "
 $host.UI.RawUI.WindowTitle = "Self Managing Scripts - ToolBox (Server) "
 #powershell -noexit -command "[console]::WindowWidth=100; [console]::WindowHeight=70; [console]::BufferWidth=[console]::WindowWidth"
 
 if ((Test-Path    "C:\scripts\TonyB\toolsbox\testmenulist\") -eq $true ){
    
-   Write-Host  "The Proper directory structure is present." -ForegroundColor Green 
+   Write-Host  "The Proper directory structure is in place." -ForegroundColor Green 
    Write-Host "                                                           " 
   }
   else{
@@ -88,15 +91,15 @@ for ($i=1;$i -le $scriptlists.count; $i++) {
     $menu.Add($i,($scriptlists[$i-1].name))
     
 
-            if ( $textcolor  -like "*DNSflush.ps1") {
+            if (($textcolor  -like "*Networking.ps1" ) -or ($textcolor -like "*met1.ps1" )) {
+            
+                    write-host $textcolor -ForegroundColor Yellow
      
-            write-host $textcolor -ForegroundColor yellow
-    }
+   }
+           else {
+        $textcolor
     
-    else {
-    $textcolor
-    
-    }
+            }
 
     }
   
