@@ -58,7 +58,7 @@ Write-Host "  Please Enter a number for the script you want to run." -Foreground
 Write-Host "  "
 Write-Host "###########################################################" 
 Write-Host "  "
-Write-Host "  Other Sub menu(s) are in highlighted in yellow." -ForegroundColor yellow 
+Write-Host "  Other Sub menu(s) are highlighted in yellow." -ForegroundColor yellow 
 Write-Host "  "
 Write-Host "###########################################################" 
 Write-Host "  "
